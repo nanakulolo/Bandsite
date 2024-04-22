@@ -194,6 +194,9 @@
   .nav__link--biography {
     border-bottom: 0.25rem solid #ffffff;
   }
+  .nav__link--shows {
+    border-bottom: 0.25rem solid #ffffff;
+  }
   .background__header {
     font-size: 2.2rem;
   }
@@ -229,6 +232,9 @@
     line-height: 3.75rem;
   }
   .nav__link--biography {
+    border-bottom: 0.25rem solid #ffffff;
+  }
+  .nav__link--shows {
     border-bottom: 0.25rem solid #ffffff;
   }
   .background {
@@ -345,6 +351,9 @@
     color: #ffffff;
   }
   .nav__link--biography {
+    border-bottom: 0.25rem solid #ffffff;
+  }
+  .nav__link--shows {
     border-bottom: 0.25rem solid #ffffff;
   }
   .background {

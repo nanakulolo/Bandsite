@@ -10,9 +10,8 @@
     <title>BandSite - Home</title>
     <link rel="stylesheet" href="./styles/bio.scss" />
     <link rel="stylesheet" href="./styles/bio.css" />
-    <link rel="stylesheet" href="./styles/variables.scss" />
   </head>
-  <body class="outer">
+  <body>
     <!-- Navigation bar-->
     <nav class="nav">
       <a href="./index.html" class="nav__header link">BANDSITE</a>
@@ -21,7 +20,7 @@
           <a href="./index.html" class="link link--active">Biography</a>
         </div>
         <div class="nav__link">
-          <a href="#" class="link">Shows</a>
+          <a href="./pages/shows.html" class="link">Shows</a>
         </div>
       </div>
     </nav>
@@ -38,8 +37,8 @@
       </h1>
       <img class="biography__img" src="./assets/images/band.jpg" alt="band">
       <div class="biography__quote">
-        "We push each other to be the best. It's not uncommon <br>
-        for one of us to say 'this needs to be better, back to the drawing board'"<br>
+        We push each other to be the best. It's not uncommon <br>
+        for one of us to say 'this needs to be better, back to the drawing board<br>
         <span class="biography__quoter">- Lead vocalist of The Bees Knees</span> 
       </div>
       <div class="biography__subtitle">
@@ -65,7 +64,7 @@
         From there, the band has soared, gaining 
         international recognition and ranking in the 
         top 10 on the Poster Charts. New fans 
-        immediately fell in love with the band’s original 
+        immediately fell in love with the band's original 
         and organic attitude, solidifying their place as 
         one of the hottest and fastest up and coming 
         acts of this century. Fans affectionately refer to 
@@ -98,6 +97,32 @@
         <img class = gallery__img src="./assets/images/Photo-gallery-9.jpg" alt="gallery 9"></img>
       </div>  
     </div>
+    <div class ="comments__header">
+      Join the Conversation
+    </div>
+    <div class ="comments">
+ 
+      <div class="comments__container">
+        <img class="comments__image" src="./assets/images/Mohan-muruge.jpg">
+      <form class="comments__form" id="form">
+        <div class ="comments__subcontainer">
+          <label for="name">NAME</label>
+          <input name="name" id="name" autocomplete="additional-name" required placeholder="Enter your name">
+        </div>
+        <div class ="comments__subcontainer"> 
+          <label for="comment"> Comment</label>
+          <textarea comment=" comment" id="comment" required placeholder="Add a new comment"></textarea>
+        </div>
+        <div class ="comments__subcontainer comments__subcontainer--button ">
+        <button class="comments__button">Comment</button>
+        </div>
+      </div>
+    </form>
+    <div id="comments__section">
+     <!-- comment code in javascript -->
+    </div>
+    <div class ="comments__divide comments__divide--bottom"></div>
+  </div>
     <!-- Social Media/ Contact info -->
     <footer class ="footer">
       <div class="footer__subcontainer">
@@ -162,5 +187,6 @@
         Copyright The Bees Knees © 2023 All Rights Reserved
       </p>
     </footer>
+    <script src="./scripts/index-page.js"></script>
   </body> 
 </html>

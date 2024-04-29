@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./styles/bio.scss" />
     <link rel="stylesheet" href="./styles/bio.css" />
   </head>
-  <body>
+  <body class="outer">
     <!-- Navigation bar-->
     <nav class="nav">
       <a href="./index.html" class="nav__header link">BANDSITE</a>
@@ -118,10 +118,10 @@
         </div>
       </div>
     </form>
-    <div id="comments__section">
-     <!-- comment code in javascript -->
-    </div>
     <div class ="comments__divide comments__divide--bottom"></div>
+    <div id="comments__section">
+     <!-- comment section code in javascript -->
+    </div>
   </div>
     <!-- Social Media/ Contact info -->
     <footer class ="footer">
@@ -187,6 +187,8 @@
         Copyright The Bees Knees © 2023 All Rights Reserved
       </p>
     </footer>
-    <script src="./scripts/index-page.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!--<script src="./scripts/band-site-api.js"></script>-->
+    <script src="./scripts/index-page.js"type="module"></script>
   </body> 
 </html>

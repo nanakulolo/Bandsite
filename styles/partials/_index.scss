@@ -1,0 +1,6 @@
+/* files to take in all partials and forward them out as a single partial*/
+
+@forward './colors';
+@forward './fonts';
+@forward './mixins';
+@forward './typography';

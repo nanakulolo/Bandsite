@@ -1,21 +1,50 @@
+/* files to take in all partials and forward them out as a single partial*/
+/*colors*/
+/*background color*/
+/*text-color*/
+/*hover*/
+/*underline*/
+/*button*/
+/*fonts*/
 @font-face {
   font-family: "Avenir";
   src: url(../assets/fonts/AvenirNextLTPro-Regular.otf);
-  font-weight: normal;
-  font-style: normal;
 }
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir--bold";
   src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
-  font-weight: bold;
-  font-style: normal;
 }
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir--demi";
   src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
-  font-weight: 600;
-  font-style: normal;
 }
+/*mixins*/
+/*font sizes*/
+/*mobile xs*/
+/*nav*/
+/*Bio Hero*/
+/*Biography*/
+/*Photo Gallery*/
+/*Comments*/
+/*Footer*/
+/*mobile*/
+/*Bio Hero*/
+/*Biography*/
+/*Photo Gallery*/
+/*Comments*/
+/*Footer*/
+/*tablet*/
+/*Bio Hero*/
+/*Biography*/
+/*Photo Gallery*/
+/*Comments*/
+/*Footer*/
+/*desktop*/
+/*Bio Hero*/
+/*Biography*/
+/*Photo Gallery*/
+/*Comments*/
+/*Footer*/
 * {
   font-family: "Avenir", sans-serif;
   box-sizing: border-box;
@@ -25,38 +54,13 @@
   margin: 0;
 }
 
+/*Navigation bar*/
 .nav {
   background-color: #323232;
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 0;
-}
-.nav__header {
-  width: auto;
-  color: #ffffff;
-  margin-top: 1.25rem;
-  font-weight: 300;
-  font-size: 0.875rem;
-  text-align: center;
-}
-.nav__links {
-  display: flex;
-  list-style: none;
-  width: 100%;
-  background-color: #323232;
-}
-.nav__links__link {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  padding: 0.625rem;
-}
-.nav__links__link:hover {
-  background-color: #000000;
-}
-.nav__links__link--underline {
-  border-bottom: 0.25rem solid #ffffff;
 }
 
 .link {
@@ -65,29 +69,63 @@
   box-shadow: none;
   font-size: 0.875rem;
 }
+
+.nav__link:hover {
+  background-color: #000000;
+}
+
 .link--active {
   font-weight: bold;
   color: #ffffff;
 }
 
+.nav__header {
+  width: auto;
+  color: #ffffff;
+  margin-top: 1.25rem;
+  font-weight: 300;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.nav__links {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  background-color: #323232;
+}
+
+.nav__link {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0.625rem;
+}
+
+.nav__link--shows {
+  border-bottom: 0.25rem solid #ffffff;
+}
+
+/*Hero Section */
 .background {
-  padding: 2% 5%;
+  padding: 2% 4%;
   padding-top: 10%;
-  padding-bottom: 10%;
   background-position: center;
   background-size: cover;
   height: 100%;
   background-image: url("../assets/images/hero-shows.jpg");
 }
+
 .background__header {
   color: #ffffff;
   font-size: 2.313rem;
   margin-bottom: 0.625rem;
   font-weight: 700;
 }
+
 .background__subheader {
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 0.876rem;
   margin-bottom: 1.25rem;
 }
 
@@ -95,6 +133,7 @@
   margin-top: 0.625rem;
 }
 
+/* Shows Section */
 .shows__section {
   background-color: #ffffff;
   padding: 2%;
@@ -131,13 +170,14 @@
   color: #ffffff;
   font-size: 1.125rem;
   font-weight: bold;
-  padding: 0.938rem 0.625rem;
-  border-radius: 0.313rem;
+  padding-top: 0.938rem;
+  padding-bottom: 0.625rem;
 }
 .shows__section__divide {
   border: 0.063rem solid #afafaf;
 }
 
+/* Footer Section */
 .footer {
   background-color: #323232;
   display: flex;
@@ -149,7 +189,7 @@
 }
 .footer__title {
   margin-bottom: 1.25rem;
-  font-size: 0.875rem;
+  font-size: 1.625rem;
 }
 .footer__social {
   display: flex;
@@ -162,11 +202,11 @@
   height: 1.625rem;
 }
 .footer__subtitle {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .footer__info {
   line-height: 1.5rem;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
 }
 .footer__contact {
   line-height: 3rem;
@@ -176,42 +216,137 @@
 }
 .footer__end {
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: 1.5rem;
 }
 .footer__copyright {
-  font-size: 0.75rem;
+  font-size: 0.5875rem;
   margin-top: -0.875rem;
 }
 
 @media (max-width: 767px) {
+  /*Navigation bar*/
   .link {
+    text-decoration: none;
+    color: #afafaf;
+    box-shadow: none;
     font-size: 0.875rem;
+  }
+  .link--active {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .nav {
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
   .nav__header {
     width: auto;
+    color: #ffffff;
+    margin-top: 1.25rem;
+    font-weight: 300;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  .nav__links {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    background-color: #323232;
   }
   .nav__link {
     width: 100%;
     height: 100%;
     text-align: center;
   }
-  .nav__link--biography {
+  .nav__link--underline {
     border-bottom: 0.25rem solid #ffffff;
   }
-  .nav__link--shows {
-    border-bottom: 0.25rem solid #ffffff;
+  /*Hero Section */
+  .background {
+    padding: 2% 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    background-image: url("../assets/images/hero-shows.jpg");
+  }
+  .background__img {
+    background-position: center;
+    background-size: cover;
+  }
+  .background__header {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+  .background__subheader {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  /*Footer Section*/
+  .footer {
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    color: #ffffff;
+    padding: 1.25rem;
+    line-height: 2.5rem;
+  }
+  .footer__title {
+    margin-bottom: 1.25rem;
+    font-size: 1.625rem;
+  }
+  .footer__social {
+    display: flex;
+  }
+  .footer__link {
+    margin-right: 2.5rem;
+  }
+  .footer__img {
+    width: 1.625rem;
+    height: 1.625rem;
+  }
+  .footer__subtitle {
+    font-size: 1rem;
+  }
+  .footer__info {
+    line-height: 1.5rem;
+    font-size: 0.9375rem;
+  }
+  .footer__contact {
+    line-height: 3rem;
+  }
+  .footer__contact a {
+    color: #ffffff;
+  }
+  .footer__end {
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  .footer__copyright {
+    font-size: 0.75rem;
+    margin-top: -0.875rem;
   }
 }
-.background__subheader {
-  font-size: 1rem;
-}
-
-.footer__title {
-  font-size: 1.625rem;
-}
-
 @media (min-width: 768px) and (max-width: 1279px) {
+  /*Navigation bar*/
+  .link {
+    text-decoration: none;
+    color: #afafaf;
+    box-shadow: none;
+  }
+  .link--active {
+    font-weight: bold;
+    color: #ffffff;
+  }
   .nav {
+    background-color: #323232;
+    display: flex;
     flex-direction: row;
     text-align: center;
     margin: 0;
@@ -222,23 +357,26 @@
     margin: 1.5625rem;
     font-weight: 300;
     font-size: 1.5625rem;
+    text-align: center;
   }
   .nav__links {
+    display: flex;
+    list-style: none;
+    width: auto;
     color: #ffffff;
+    background-color: #323232;
   }
-  .nav__links__link {
+  .nav__link {
     width: auto;
     height: 100%;
-    font-size: 1.5625rem;
+    font-size: 1.25rem;
     margin-left: 2.188rem;
     line-height: 3.75rem;
   }
-  .nav__links__link--biography {
-    border-bottom: 0.25rem solid #ffffff;
+  .nav__link--underline {
+    border-bottom: 0.125rem solid #ffffff;
   }
-  .nav__links__link--shows {
-    border-bottom: 0.25rem solid #ffffff;
-  }
+  /*Hero Section */
   .background {
     padding: 0% 5%;
     background: #ffffff;
@@ -268,32 +406,74 @@
     width: 60%;
     height: 9.375rem;
   }
-  .shows__section__container {
+  /*Shows Section*/
+  .shows__section {
+    background-color: #ffffff;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+  .shows__header {
+    font-size: 1.75rem;
+    color: #000000;
+    font-weight: bold;
+  }
+  .shows__container {
+    margin-bottom: 1.25rem;
     display: flex;
     flex-direction: row;
     border-bottom: #afafaf 0.063rem solid;
     justify-content: space-between;
   }
-  .shows__section__subcontainer {
+  .shows__subcontainer {
     display: flex;
     flex-direction: column;
   }
-  .shows__section__button {
+  .shows__subtitle {
+    font-size: 0.813rem;
+    color: #afafaf;
+    margin-bottom: 0.625rem;
+  }
+  .shows__info {
+    font-size: 0.876rem;
+    margin-bottom: 0.625rem;
+    font-weight: 400;
+  }
+  .shows__info--date {
+    font-weight: bold;
+    font-size: 0.938rem;
+    margin-bottom: 0.625rem;
+  }
+  .shows__button {
     width: 20%;
+    align-self: center;
+    background-color: #000000;
+    color: #ffffff;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 0.313rem;
     margin-bottom: 1.25rem;
   }
-  .shows__section__divide {
+  .shows__divide {
     display: none;
+  }
+  /*Footer Section*/
+  .footer {
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 1.25rem;
+    line-height: 2.5rem;
   }
   .footer__subcontainer {
     display: flex;
     flex-direction: row;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .footer--column {
+  .footer__subcontainer--column {
     display: flex;
     flex-direction: column;
     margin-right: 3.2rem;
@@ -304,14 +484,18 @@
     font-size: 2.25rem;
   }
   .footer__subtitle {
-    font-size: 2.25rem;
+    font-size: 0.9rem;
     width: 12.5rem;
   }
   .footer__social {
+    display: flex;
     margin-left: 3.125rem;
     margin-top: 1.75rem;
   }
-  .footer__social__img {
+  .footer__link {
+    margin-right: 2.5rem;
+  }
+  .footer__img {
     width: 1.575rem;
     height: 1.575rem;
   }
@@ -330,7 +514,8 @@
     margin-left: 0.625rem;
     margin-top: 1.25rem;
     font-size: 1.5rem;
-    width: 0.775rem;
+    width: -moz-max-content;
+    width: max-content;
   }
   .footer__copyright {
     font-size: 0.775rem;
@@ -338,6 +523,7 @@
   }
 }
 @media (min-width: 1280px) {
+  /*Navigation bar*/
   .link {
     text-decoration: none;
     color: #afafaf;
@@ -360,7 +546,7 @@
     margin: 1.5625rem;
     margin-left: 9.375rem;
     font-weight: 300;
-    font-size: 0.875rem;
+    font-size: 1.625rem;
     text-align: center;
   }
   .nav__links {
@@ -370,19 +556,10 @@
     color: #ffffff;
     background-color: #323232;
   }
-  .nav__links__link {
-    width: auto;
-    height: 100%;
-    font-size: 0.875rem;
-    margin-left: 2.188rem;
-    line-height: 3.75rem;
-  }
-  .nav__links__link--biography {
-    border-bottom: 0.25rem solid #ffffff;
-  }
-  .nav__links__link--shows {
+  .nav__link--underline {
     border-bottom: 0.125rem solid #ffffff;
   }
+  /*Hero Section */
   .background {
     padding: 0% 9%;
     background: #ffffff;
@@ -406,51 +583,52 @@
     font-size: 3.5rem;
     font-weight: bold;
   }
-  .background .sound__cloud {
+  .sound__cloud {
     width: 50%;
     margin-top: 0.625rem;
     margin-left: 9.375rem;
   }
+  /*Shows Section*/
   .shows__section {
     background-color: #ffffff;
     padding: 2%;
     display: flex;
     flex-direction: row;
   }
-  .shows__section__header {
+  .shows__header {
     font-size: 1.75rem;
     color: #000000;
     margin-left: 6.25rem;
   }
-  .shows__section .show__container {
+  .show__container {
     display: flex;
     flex-direction: column;
     width: 50rem;
     margin-left: 6.25rem;
     margin-top: 1.875rem;
   }
-  .shows__section__container {
+  .shows__container {
     margin-bottom: 1.25rem;
     display: flex;
     flex-direction: row;
     border-bottom: #afafaf 0.063rem solid;
     justify-content: space-between;
   }
-  .shows__section__container__subcontainer {
+  .shows__subcontainer {
     display: flex;
     flex-direction: column;
   }
-  .shows__section__container__subcontainer__subtitle {
+  .shows__subtitle {
     font-size: 0.813rem;
     color: #afafaf;
     margin-bottom: 0.625rem;
   }
-  .shows__section__container__subcontainer__info {
+  .shows__info {
     font-size: 0.876rem;
     margin-bottom: 0.625rem;
     font-weight: 400;
   }
-  .shows__section__container__subcontainer__info--date {
+  .shows__info--date {
     font-weight: bold;
     font-size: 0.938rem;
     margin-bottom: 0.625rem;
@@ -468,6 +646,7 @@
   .shows__divide {
     display: none;
   }
+  /*Footer Section*/
   .footer {
     background-color: #323232;
     display: flex;
@@ -480,6 +659,8 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     margin-left: 4.4rem;
   }
   .footer__subcontainer--column {
@@ -500,10 +681,10 @@
     margin-left: 11.8rem;
     margin-top: 2.15rem;
   }
-  .footer__social__link {
+  .footer__link {
     margin-right: 2.5rem;
   }
-  .footer__social__img {
+  .footer__img {
     width: 1.675rem;
     height: 1.675rem;
   }
@@ -520,5 +701,9 @@
     margin-left: 29.875rem;
     margin-top: 1.7rem;
     font-size: 1.5rem;
+  }
+  .footer__copyright {
+    margin-left: 9.3rem;
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=shows.css.map */

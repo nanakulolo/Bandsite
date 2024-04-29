@@ -1,27 +1,65 @@
+/* files to take in all partials and forward them out as a single partial*/
+/*colors*/
+/*background color*/
+/*text-color*/
+/*hover*/
+/*underline*/
+/*button*/
+/*fonts*/
 @font-face {
   font-family: "Avenir";
   src: url(../assets/fonts/AvenirNextLTPro-Regular.otf);
-  font-weight: normal;
-  font-style: normal;
 }
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir--bold";
   src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
-  font-weight: bold;
-  font-style: normal;
 }
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir--demi";
   src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
-  font-weight: 600;
-  font-style: normal;
 }
+/*mixins*/
+/*font sizes*/
+/*mobile xs*/
+/*nav*/
+/*Bio Hero*/
+/*Biography*/
+/*Photo Gallery*/
+/*Comments*/
+/*Footer*/
+/*mobile*/
+/*Bio Hero*/
+/*Biography*/
+/*Photo Gallery*/
+/*Comments*/
+/*Footer*/
+/*tablet*/
+/*Bio Hero*/
+/*Biography*/
+/*Photo Gallery*/
+/*Comments*/
+/*Footer*/
+/*desktop*/
+/*Bio Hero*/
+/*Biography*/
+/*Photo Gallery*/
+/*Comments*/
+/*Footer*/
 * {
   font-family: "Avenir", sans-serif;
   box-sizing: border-box;
 }
 
 .outer {
+  margin: 0;
+}
+
+/*Navigation bar*/
+.nav {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   margin: 0;
 }
 
@@ -41,37 +79,34 @@
   color: #ffffff;
 }
 
-.nav {
-  background-color: #323232;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
 .nav__header {
   width: auto;
   color: #ffffff;
   margin-top: 1.25rem;
   font-weight: 300;
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   text-align: center;
 }
+
 .nav__links {
   display: flex;
   list-style: none;
   width: 100%;
   background-color: #323232;
 }
+
 .nav__link {
   width: 100%;
   height: 100%;
-  font-size: 1.25rem;
   text-align: center;
   padding: 0.625rem;
 }
-.nav__link--biography-active {
+
+.nav__link--biography {
   border-bottom: 0.25rem solid #ffffff;
 }
 
+/*Hero Section */
 .background {
   padding: 2% 5%;
   padding-top: 30%;
@@ -81,54 +116,65 @@
   height: 100%;
   background-image: url("../assets/images/hero-bio.jpg");
 }
+
 .background__img {
   background-position: center;
   background-size: cover;
 }
+
 .background__header {
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
+/*Biography section*/
 .biography {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   padding: 6%;
 }
+
 .biography__header {
   width: -moz-max-content;
   width: max-content;
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 .biography__img {
   width: auto;
 }
+
 .biography__quote {
   line-height: 1.875rem;
   font-size: 1rem;
   margin-top: 1.25rem;
   font-weight: bold;
 }
+
 .biography__subtitle {
   font-size: 1rem;
   font-weight: bold;
   margin-top: 1.125rem;
 }
+
 .biography__description {
+  margin-top: 0rem;
   margin-top: 1.875rem;
   font-size: 0.875rem;
   padding: 5%;
 }
 
+/*Gallery Section*/
 .gallery {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   padding: 6%;
 }
+
 .gallery__header {
   font-size: 1.875rem;
   width: -moz-max-content;
@@ -136,15 +182,130 @@
   margin-bottom: 1.25rem;
   font-weight: bold;
 }
-.gallery__subcontainer {
-  display: flex;
-  flex-direction: row;
-}
+
 .gallery__img {
   width: 100%;
   margin-bottom: 1.25rem;
 }
 
+/*comments section*/
+.comments {
+  background-color: #ffffff;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.comments__header {
+  font-size: 1.875rem;
+  font-weight: Bold;
+  margin-bottom: 0.625rem;
+}
+
+.comments__subcontainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0.625rem;
+  color: #afafaf;
+  margin-top: 1.25rem;
+  margin-left: 0.625rem;
+  width: 18.75rem;
+}
+
+.comments__image {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  margin-top: 2rem;
+  margin-left: 0.63rem;
+}
+
+#name {
+  padding: 0.625rem;
+  margin-top: 0.25rem;
+  width: 12.5rem;
+}
+
+#comment {
+  width: 12.5rem;
+  height: 5rem;
+  margin-top: 0.25rem;
+  padding: 0.625rem;
+}
+
+.comments__button {
+  width: 12.5rem;
+  padding: 1%;
+  font-size: 1.5rem;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.comments__divide {
+  border: 0.063rem solid #afafaf;
+}
+
+.comments__divide--top {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+
+.commentspost {
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+  margin-right: 2.5rem;
+}
+
+.commentsposts__container {
+  display: flex;
+  flex-direction: column;
+  word-break: break-word;
+}
+
+.commentsposts__subcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 1.25rem;
+}
+
+.commentsposts__image {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  margin-top: 0.25rem;
+  margin-left: 0.063rem;
+  background-color: #afafaf;
+}
+
+.commentsposts__name {
+  font-size: 0.875rem;
+  color: #000000;
+}
+
+.commentsposts__timestamp {
+  font-size: 0.875rem;
+  color: #afafaf;
+}
+
+.commentsposts__comments {
+  margin-left: 1.25rem;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  width: 12.5rem;
+}
+
+/*footer section*/
 .footer {
   background-color: #323232;
   display: flex;
@@ -154,116 +315,396 @@
   padding: 1.25rem;
   line-height: 2.5rem;
 }
+
 .footer__title {
   margin-bottom: 1.25rem;
   font-size: 1.625rem;
 }
+
 .footer__social {
   display: flex;
 }
+
 .footer__link {
   margin-right: 2.5rem;
 }
+
 .footer__img {
   width: 1.625rem;
   height: 1.625rem;
 }
+
 .footer__subtitle {
   font-size: 1rem;
 }
+
 .footer__info {
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
+
 .footer__contact {
   line-height: 3rem;
 }
 .footer__contact a {
   color: #ffffff;
 }
+
 .footer__end {
   font-weight: 300;
   font-size: 1.5rem;
 }
+
 .footer__copyright {
-  font-size: 0.6875rem;
+  font-size: 0.5875rem;
   margin-top: -0.875rem;
 }
 
 @media (max-width: 767px) {
-  .nav__link--biography {
+  /*Navigation bar*/
+  .link {
+    text-decoration: none;
+    color: #afafaf;
+    box-shadow: none;
+    font-size: 0.875rem;
+  }
+  .link--active {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .nav {
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav__header {
+    width: auto;
+    color: #ffffff;
+    margin-top: 1.25rem;
+    font-weight: 300;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  .nav__links {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    background-color: #323232;
+  }
+  .nav__link {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  .nav__link--underline {
     border-bottom: 0.25rem solid #ffffff;
   }
-  .nav__link--shows {
-    border-bottom: 0.25rem solid #ffffff;
+  /*Hero Section */
+  .background {
+    padding: 2% 5%;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    background-image: url("../assets/images/hero-bio.jpg");
+  }
+  .background__img {
+    background-position: center;
+    background-size: cover;
   }
   .background__header {
+    color: #ffffff;
     font-size: 2.2rem;
+    font-weight: bold;
+  }
+  /*Biography Section*/
+  .biography {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 6%;
   }
   .biography__header {
-    font-size: 2rem;
+    width: -moz-max-content;
+    width: max-content;
+    font-weight: bold;
+  }
+  .biography__img {
+    width: auto;
   }
   .biography__quote {
+    line-height: 1.875rem;
     font-size: 1.125rem;
+    margin-top: 1.25rem;
+    font-weight: bold;
   }
   .biography__subtitle {
     font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 1.125rem;
   }
-  .gallery__subcontainer {
-    display: block;
+  .biography__description {
+    margin-top: 0rem;
+    margin-top: 1.875rem;
+    font-size: 1rem;
+    padding: 5%;
+  }
+  /*Gallery Section*/
+  .gallery {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 6%;
+  }
+  .gallery__header {
+    font-size: 1.875rem;
+    width: -moz-max-content;
+    width: max-content;
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+  }
+  .gallery__img {
+    width: 100%;
+    margin-bottom: 1.25rem;
+  }
+  /*Comments Section*/
+  .comments {
+    background-color: #ffffff;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+  .comments__container {
+    display: flex;
     flex-direction: row;
+  }
+  .comments__header {
+    font-size: 1.875rem;
+    font-weight: Bold;
+    margin-bottom: 0.625rem;
+  }
+  .comments__subcontainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0.625rem;
+    color: #afafaf;
+    margin-top: 1.25rem;
+    margin-left: 0.625rem;
+    width: 18.75rem;
+  }
+  .comments__image {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin-top: 2rem;
+    margin-left: 0.63rem;
+  }
+  #name {
+    padding: 0.625rem;
+    margin-top: 0.25rem;
+    width: 20.5rem;
+  }
+  #comment {
+    width: 20.5rem;
+    height: 5rem;
+    margin-top: 0.25rem;
+    padding: 0.625rem;
+  }
+  .comments__button {
+    width: 20.5rem;
+    padding: 1%;
+    font-size: 1.5rem;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  .comments__divide {
+    border: 0.063rem solid #afafaf;
+  }
+  .comments__divide--top {
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+  }
+  .commentspost {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    margin-right: 2.5rem;
+  }
+  .commentsposts__container {
+    display: flex;
+    flex-direction: column;
+    word-break: break-word;
+  }
+  .commentsposts__subcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 1.25rem;
+  }
+  .commentsposts__image {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin-top: 0.25rem;
+    margin-left: 0.063rem;
+    background-color: #afafaf;
+  }
+  .commentsposts__name {
+    font-size: 0.875rem;
+    color: #000000;
+  }
+  .commentsposts__timestamp {
+    font-size: 0.875rem;
+    color: #afafaf;
+  }
+  .commentsposts__comments {
+    margin-left: 1.25rem;
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
+    width: 20.5rem;
+  }
+  /*Footer Section*/
+  .footer {
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    color: #ffffff;
+    padding: 1.25rem;
+    line-height: 2.5rem;
+  }
+  .footer__title {
+    margin-bottom: 1.25rem;
+    font-size: 1.625rem;
+  }
+  .footer__social {
+    display: flex;
+  }
+  .footer__link {
+    margin-right: 2.5rem;
+  }
+  .footer__img {
+    width: 1.625rem;
+    height: 1.625rem;
+  }
+  .footer__subtitle {
+    font-size: 1rem;
+  }
+  .footer__info {
+    line-height: 1.5rem;
+    font-size: 0.9375rem;
+  }
+  .footer__contact {
+    line-height: 3rem;
+  }
+  .footer__contact a {
+    color: #ffffff;
+  }
+  .footer__end {
+    font-weight: 300;
+    font-size: 1.5rem;
   }
   .footer__copyright {
     font-size: 0.75rem;
+    margin-top: -0.875rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  /*Navigation bar*/
+  .link {
+    text-decoration: none;
+    color: #afafaf;
+    box-shadow: none;
+  }
+  .link--active {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .nav {
+    background-color: #323232;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: 0;
+  }
   .nav__header {
+    width: auto;
+    color: #ffffff;
     margin: 1.5625rem;
+    font-weight: 300;
     font-size: 1.5625rem;
     text-align: center;
   }
   .nav__links {
+    display: flex;
+    list-style: none;
     width: auto;
     color: #ffffff;
+    background-color: #323232;
   }
   .nav__link {
+    width: auto;
+    height: 100%;
+    font-size: 1.25rem;
     margin-left: 2.188rem;
     line-height: 3.75rem;
   }
-  .nav__link--biography {
-    border-bottom: 0.25rem solid #ffffff;
+  .nav__link--underline {
+    border-bottom: 0.125rem solid #ffffff;
   }
-  .nav__link--shows {
-    border-bottom: 0.25rem solid #ffffff;
-  }
+  /*Hero Section */
   .background {
     padding: 0% 5%;
+    background: #ffffff;
     padding-top: 20%;
     padding-bottom: 20%;
     background-position: center;
     background-size: cover;
     height: 100%;
+    background-image: url("../assets/images/hero-bio.jpg");
+  }
+  .background__img {
+    background-position: center;
+    background-size: cover;
   }
   .background__header {
+    color: #ffffff;
     font-size: 3.5rem;
+    font-weight: bold;
   }
+  /*Biography Section*/
   .biography {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
     padding: 2%;
   }
   .biography__header {
     font-size: 2.5rem;
+    font-weight: bold;
   }
   .biography__img {
     width: 85%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .biography__quote {
     line-height: 2.5rem;
     font-size: 1.5rem;
     margin-top: 2.25rem;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
   }
   .biography__subtitle {
     font-size: 1.5625rem;
+    font-weight: Bold;
     margin-top: 3.75rem;
     margin-left: 4.375rem;
   }
@@ -272,39 +713,189 @@
     flex-direction: row;
   }
   .biography__description {
+    margin-top: 1rem;
+    margin-top: 1.875rem;
     line-height: 1.5rem;
+    padding: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125rem;
   }
   .biography__quoter {
     font-size: 1.125rem;
   }
+  /*Photo Gallery Section*/
   .gallery {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
     padding: 2%;
+  }
+  .gallery__header {
+    font-size: 1.875rem;
+    width: -moz-max-content;
+    width: max-content;
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+  }
+  .gallery__subcontainer {
+    display: flex;
+    flex-direction: row;
   }
   .gallery__img {
     width: 30%;
+    margin-bottom: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*Comments Section*/
+  .comments {
+    background-color: #ffffff;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .comments__container {
+    display: flex;
+    flex-direction: row;
+    width: 37.5rem;
+  }
+  .comments__header {
+    margin-bottom: 0.625rem;
+    margin-left: 13.75rem;
+    font-size: 1.875rem;
+    font-weight: 2.5rem;
+  }
+  .comments__subcontainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0.625rem;
+    color: #afafaf;
+    margin-top: 1.25rem;
+    margin-left: 0.625rem;
+    width: 18.75rem;
+  }
+  .comments__subcontainer--button {
+    width: 33.125rem;
+    padding: 0%;
+    margin-bottom: 1.25rem;
+  }
+  .comments__image {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin-top: 2rem;
+    margin-left: 0.375rem;
+  }
+  #name {
+    padding: 0.625rem;
+    margin-top: 0.25rem;
+    width: 32.5rem;
+    font-size: 1rem;
+  }
+  #comment {
+    width: 32.5rem;
+    height: 5rem;
+    margin-top: 0.25rem;
+    padding: 0.625rem;
+    font-size: 1rem;
+  }
+  .comments__button {
+    width: 30%;
+    padding: 1%;
+    font-size: 1.5rem;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 0.3125rem;
+    align-self: flex-end;
+  }
+  .comments__divide {
+    border: 0.063rem solid #afafaf;
+    padding-left: 40rem;
+  }
+  .comments__divide--top {
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+  }
+  .commentspost {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    margin-right: 2.5rem;
+  }
+  .commentsposts__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .commentsposts__subcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 1.25rem;
+    width: 32.5rem;
+  }
+  .commentsposts__image {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin-top: 0.25rem;
+    margin-left: 1.25rem;
+    background-color: #afafaf;
+  }
+  .commentsposts__name {
+    font-size: 1rem;
+    color: #000000;
+    font-family: "avenir--bold";
+  }
+  .commentsposts__timestamp {
+    font-size: 1rem;
+    color: #afafaf;
+  }
+  .commentsposts__comments {
+    margin-left: 1.25rem;
+    margin-top: 1.25rem;
+    font-size: 1rem;
+    width: 32.5rem;
+  }
+  /*Footer Section*/
+  .footer {
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 1.25rem;
+    line-height: 2.5rem;
   }
   .footer__subcontainer {
     display: flex;
     flex-direction: row;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .footer__subcontainer--column {
     display: flex;
     flex-direction: column;
-    margin-right: 5rem;
+    margin-right: 3.2rem;
   }
   .footer__title {
-    margin-bottom: 3.25rem;
     width: -moz-max-content;
     width: max-content;
     font-size: 2.25rem;
   }
   .footer__subtitle {
-    font-size: 0.9375rem;
+    font-size: 0.9rem;
+    width: 12.5rem;
   }
   .footer__social {
     display: flex;
-    margin-left: 5.125rem;
+    margin-left: 3.125rem;
     margin-top: 1.75rem;
   }
   .footer__link {
@@ -313,6 +904,10 @@
   .footer__img {
     width: 1.575rem;
     height: 1.575rem;
+  }
+  .footer__info {
+    line-height: 1.5rem;
+    font-size: 0.8375rem;
   }
   .footer__contact {
     line-height: 3rem;
@@ -324,22 +919,36 @@
     font-weight: 400;
     margin-left: 0.625rem;
     margin-top: 1.25rem;
-    font-size: 1.375rem;
+    font-size: 1.5rem;
     width: -moz-max-content;
     width: max-content;
   }
   .footer__copyright {
-    font-size: 0.8375rem;
+    font-size: 0.775rem;
     margin-top: 0.125rem;
   }
 }
 @media (min-width: 1280px) {
+  /*Navigation bar*/
+  .link {
+    text-decoration: none;
+    color: #afafaf;
+    box-shadow: none;
+  }
+  .link--active {
+    font-weight: bold;
+    color: #ffffff;
+  }
   .nav {
+    background-color: #323232;
     display: flex;
     flex-direction: row;
     text-align: center;
+    margin: 0;
   }
   .nav__header {
+    width: auto;
+    color: #ffffff;
     margin: 1.5625rem;
     margin-left: 9.375rem;
     font-weight: 300;
@@ -347,24 +956,37 @@
     text-align: center;
   }
   .nav__links {
+    display: flex;
+    list-style: none;
     width: auto;
     color: #ffffff;
+    background-color: #323232;
   }
-  .nav__link--biography {
-    border-bottom: 0.25rem solid #ffffff;
-  }
-  .nav__link--shows {
-    border-bottom: 0.25rem solid #ffffff;
-  }
+  /*Hero Section */
   .background {
     padding: 0% 9%;
+    background: #ffffff;
     padding-top: 20%;
     padding-bottom: 20%;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    background-image: url("../assets/images/hero-bio.jpg");
+  }
+  .background__img {
+    background-position: center;
+    background-size: cover;
   }
   .background__header {
+    color: #ffffff;
     font-size: 4.5rem;
+    font-weight: bold;
   }
+  /*Biography Section*/
   .biography {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
     padding: 2%;
   }
   .biography__header {
@@ -373,18 +995,20 @@
   }
   .biography__img {
     width: 85%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   .biography__quote {
     line-height: 2.5rem;
     font-size: 1.5rem;
     margin-top: 2.25rem;
     font-weight: bold;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   .biography__subtitle {
     font-size: 1.5625rem;
-    font-weight: bold;
+    font-weight: Bold;
     margin-top: 3.75rem;
     margin-left: 4.375rem;
   }
@@ -393,21 +1017,160 @@
     flex-direction: row;
   }
   .biography__description {
+    margin-top: 0rem;
+    margin-top: 1.875rem;
     line-height: 1.5rem;
-    margin: 0 auto;
+    padding: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125rem;
   }
   .biography__quoter {
     font-size: 1.125rem;
   }
+  /*Photo Gallery Section*/
   .gallery {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
     padding: 2% 8%;
+  }
+  .gallery__header {
+    font-size: 1.875rem;
+    width: -moz-max-content;
+    width: max-content;
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+  }
+  .gallery__subcontainer {
+    display: flex;
+    flex-direction: row;
   }
   .gallery__img {
     width: 30%;
     margin-bottom: 1.25rem;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
+  .comments {
+    background-color: #ffffff;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /*Comments Section*/
+  .comments__container {
+    display: flex;
+    flex-direction: row;
+    width: 37.5rem;
+  }
+  .comments__header {
+    margin-bottom: 0.625rem;
+    margin-left: 13.75rem;
+    font-size: 1.875rem;
+    font-weight: 2.5rem;
+  }
+  .comments__subcontainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0.625rem;
+    color: #afafaf;
+    margin-top: 1.25rem;
+    margin-left: 0.625rem;
+    width: 18.75rem;
+  }
+  .comments__subcontainer--button {
+    width: 33.125rem;
+    padding: 0%;
+    margin-bottom: 1.25rem;
+  }
+  .comments__image {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin-top: 2rem;
+    margin-left: 0.375rem;
+  }
+  #name {
+    padding: 0.625rem;
+    margin-top: 0.25rem;
+    width: 32.5rem;
+  }
+  #comment {
+    width: 32.5rem;
+    height: 5rem;
+    margin-top: 0.25rem;
+    padding: 0.625rem;
+  }
+  .comments__button {
+    width: 30%;
+    padding: 1%;
+    font-size: 1.5rem;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 0.3125rem;
+    align-self: flex-end;
+  }
+  .comments__divide {
+    border: 0.063rem solid #afafaf;
+    padding-left: 40rem;
+  }
+  .comments__divide--top {
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+  }
+  .commentspost {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    margin-right: 2.5rem;
+  }
+  .commentsposts__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .commentsposts__subcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 1.25rem;
+    width: 32.5rem;
+  }
+  .commentsposts__image {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin-top: 0.25rem;
+    margin-left: 1.25rem;
+    background-color: #afafaf;
+  }
+  .commentsposts__name {
+    font-size: 1rem;
+    color: #000000;
+    font-family: "avenir--bold";
+  }
+  .commentsposts__timestamp {
+    font-size: 1rem;
+    color: #afafaf;
+  }
+  .commentsposts__comments {
+    margin-left: 1.25rem;
+    margin-top: 1.25rem;
+    font-size: 1rem;
+    width: 32.5rem;
+  }
+  /*Footer Section*/
   .footer {
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    width: auto;
     padding: 3.75rem;
     line-height: 2.5rem;
   }
@@ -415,8 +1178,9 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin: 0 auto;
-    margin-left: 6.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 4.4rem;
   }
   .footer__subcontainer--column {
     display: flex;
@@ -429,12 +1193,15 @@
     font-size: 2.5rem;
   }
   .footer__subtitle {
-    font-size: 0.9375rem;
+    font-size: 1rem;
   }
   .footer__social {
     display: flex;
-    margin-left: 13.8rem;
+    margin-left: 11.8rem;
     margin-top: 2.15rem;
+  }
+  .footer__link {
+    margin-right: 2.5rem;
   }
   .footer__img {
     width: 1.675rem;
@@ -448,12 +1215,14 @@
   }
   .footer__end {
     position: absolute;
-    left: 43.75rem;
+    left: 40.75rem;
+    font-weight: 300;
     margin-left: 29.875rem;
     margin-top: 1.7rem;
-    font-size: 1.375rem;
+    font-size: 1.5rem;
   }
   .footer__copyright {
-    margin-left: 11.3rem;
+    margin-left: 9.3rem;
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=bio.css.map */
